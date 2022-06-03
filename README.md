@@ -1,1 +1,1 @@
-# This is my repo to learning ReactJS from zero to hero. Happy Coding :)
+# This is my repo to learn ReactJS from zero to hero. Happy Coding :)
