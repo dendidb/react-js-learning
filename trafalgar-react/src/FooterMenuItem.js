@@ -1,13 +1,17 @@
-const FooterNavItem = ({ title, to, text }) => {
+const FooterNavItem = ({ title, items }) => {
 
   return (
     // footer-menu-item
     <div className="footer__menu__item">
       <h3 className="footer__title">{title}</h3>
       <ul className="footer__nav">
-        <li className="footer__nav__item">
-          <a className="footer__nav__link" href={to}>{text}</a>
-        </li>
+        { items.map((v, i) => {
+          return (
+            <li key={`f-${i}`} className="footer__nav__item">
+              <a className="footer__nav__link" href={v.link}>{v.text}</a>
+            </li>
+          )
+        })};
       </ul>
     </div>
   )

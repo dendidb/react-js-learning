@@ -8,19 +8,19 @@ const Footer = () => {
         title: 'Company',
         nav: [
           {
-            title: 'About',
+            text: 'About',
             link: '#about'
           },
           {
-            title: 'Testimonials',
+            text: 'Testimonials',
             link: '#testimonials'
           },
           {
-            title: 'Find a doctor',
+            text: 'Find a doctor',
             link: '#find-a-doctor'
           },
           {
-            title: 'Apps',
+            text: 'Apps',
             link: '#apps'
           }
         ]
@@ -29,19 +29,19 @@ const Footer = () => {
         title: 'Region',
         nav: [
           {
-            title: 'Indonesia',
+            text: 'Indonesia',
             link: '#indonesia'
           },
           {
-            title: 'Singapore',
+            text: 'Singapore',
             link: '#singapore'
           },
           {
-            title: 'Hongkong',
+            text: 'Hongkong',
             link: '#hongkong'
           },
           {
-            title: 'Canada',
+            text: 'Canada',
             link: '#canada'
           }
         ]
@@ -50,19 +50,19 @@ const Footer = () => {
         title: 'Help',
         nav: [
           {
-            title: 'Help Center',
+            text: 'Help Center',
             link: '#help'
           },
           {
-            title: 'Contact Support',
+            text: 'Contact Support',
             link: '#contact'
           },
           {
-            title: 'Intructions',
+            text: 'Intructions',
             link: '#Intructions'
           },
           {
-            title: 'How it works',
+            text: 'How it works',
             link: '#how-it-works'
           }
         ]
@@ -73,12 +73,14 @@ const Footer = () => {
     // footer
     <div className="footer">
       <div className="container">
-        <div className="footer__menu js-footer-accordion">
-          { footerMenuItem.nav.map((v, i) => {
+      <div className="footer__menu js-footer-accordion">
+          { footerMenuItem.map((v, i) => {
+            let title = v.title;
             return (
-              <FooterMenuItem key={`f-${i}`} title={v.title} to={v.to} text={v.text} />
-            )
-          })}
+              <FooterMenuItem key={`f-${i}`} title={title} 
+              items={v.nav} />
+              )
+          })};
         </div>
         <div className="footer__about">
           <a className="footer__logo" href="index.html">

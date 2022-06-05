@@ -49,9 +49,10 @@ const Testimonials = () => {
           <div className="testimonials__body js-testimonials">
             { testimonialsItem.map((v, i) => {
               return (
-                <TestimonialsItem key={`t-${i}`} image={v.image} title={v.title} caption={v.caption} />
+                <TestimonialsItem key={`t-${i}`} image={v.image} title={v.title} name={v.name} position={v.position} caption={v.caption} />
               )
             })}
+  
           </div>
         </div>
       </div>
