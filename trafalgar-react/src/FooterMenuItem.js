@@ -13,7 +13,6 @@ const FooterNavItem = ({ title, items }) => {
             </li>
           );
         })}
-        ;
       </ul>
     </div>
   );

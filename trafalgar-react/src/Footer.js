@@ -8,19 +8,19 @@ const Footer = () => {
       nav: [
         {
           text: "About",
-          link: "#about",
+          link: "#about"
         },
         {
           text: "Testimonials",
-          link: "#testimonials",
+          link: "#testimonials"
         },
         {
           text: "Find a doctor",
-          link: "#find-a-doctor",
+          link: "#find-a-doctor"
         },
         {
           text: "Apps",
-          link: "#apps",
+          link: "#apps"
         },
       ],
     },
@@ -29,19 +29,19 @@ const Footer = () => {
       nav: [
         {
           text: "Indonesia",
-          link: "#indonesia",
+          link: "#indonesia"
         },
         {
           text: "Singapore",
-          link: "#singapore",
+          link: "#singapore"
         },
         {
           text: "Hongkong",
-          link: "#hongkong",
+          link: "#hongkong"
         },
         {
           text: "Canada",
-          link: "#canada",
+          link: "#canada"
         },
       ],
     },
@@ -50,19 +50,19 @@ const Footer = () => {
       nav: [
         {
           text: "Help Center",
-          link: "#help",
+          link: "#help"
         },
         {
           text: "Contact Support",
-          link: "#contact",
+          link: "#contact"
         },
         {
           text: "Intructions",
-          link: "#Intructions",
+          link: "#Intructions"
         },
         {
           text: "How it works",
-          link: "#how-it-works",
+          link: "#how-it-works"
         },
       ],
     },
@@ -74,12 +74,11 @@ const Footer = () => {
       <div className="container">
         <div className="footer__menu js-footer-accordion">
           {footerMenuItem.map((v, i) => {
-            let title = v.title;
+            let title = v.title
             return (
               <FooterMenuItem key={`f-${i}`} title={title} items={v.nav} />
-            );
+            )
           })}
-          ;
         </div>
         <div className="footer__about">
           <a className="footer__logo" href="index.html">

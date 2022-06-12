@@ -10,36 +10,31 @@ const Testimonials = () => {
       image: avatar1,
       name: "Edward Newgate",
       position: "Founder Circle",
-      caption:
-        "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely",
+      caption: "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely"
     },
     {
       image: avatar1,
       name: "Edward Newgate",
       position: "Founder Circle",
-      caption:
-        "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely",
+      caption: "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely"
     },
     {
       image: avatar2,
       name: "Edward Newgate",
       position: "Founder Circle",
-      caption:
-        "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely",
+      caption: "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely"
     },
     {
       image: avatar3,
       name: "Edward Newgate",
       position: "Founder Circle",
-      caption:
-        "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely",
+      caption: "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely"
     },
     {
       image: avatar4,
       name: "Edward Newgate",
       position: "Founder Circle",
-      caption:
-        "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely",
+      caption: "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely"
     },
   ];
 
