@@ -1,5 +1,4 @@
 const HeroBannerItem = ({ image, title, desc }) => {
-  
   // destructuring concept
   // const { image, title, desc } = props;
 
@@ -15,14 +14,16 @@ const HeroBannerItem = ({ image, title, desc }) => {
               <h2 className="hero-banner__title">{title}</h2>
               <p className="hero-banner__desc">{desc}</p>
               <div className="hero-banner__btn">
-                <a className="btn btn--primary" href="apps.html">Consult today</a>
+                <a className="btn btn--primary" href="apps.html">
+                  Consult today
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default HeroBannerItem;

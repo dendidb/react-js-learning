@@ -1,5 +1,4 @@
 const OurServiceItem = ({ image, title, desc }) => {
-
   return (
     <div className="service__card">
       <div className="service__card__box">
@@ -12,7 +11,7 @@ const OurServiceItem = ({ image, title, desc }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default OurServiceItem;
