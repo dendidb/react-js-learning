@@ -1,7 +1,4 @@
 import avatar1 from "./assets/images/dummy/testimonials-1.jpg";
-import avatar2 from "./assets/images/dummy/testimonials-2.png";
-import avatar3 from "./assets/images/dummy/testimonials-3.png";
-import avatar4 from "./assets/images/dummy/testimonials-4.png";
 import TestimonialsItem from "./TestimonialsItem";
 
 const Testimonials = () => {
@@ -10,31 +7,8 @@ const Testimonials = () => {
       image: avatar1,
       name: "Edward Newgate",
       position: "Founder Circle",
-      caption: "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely"
-    },
-    {
-      image: avatar1,
-      name: "Edward Newgate",
-      position: "Founder Circle",
-      caption: "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely"
-    },
-    {
-      image: avatar2,
-      name: "Edward Newgate",
-      position: "Founder Circle",
-      caption: "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely"
-    },
-    {
-      image: avatar3,
-      name: "Edward Newgate",
-      position: "Founder Circle",
-      caption: "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely"
-    },
-    {
-      image: avatar4,
-      name: "Edward Newgate",
-      position: "Founder Circle",
-      caption: "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely"
+      caption:
+        "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely",
     },
   ];
 

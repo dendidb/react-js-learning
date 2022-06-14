@@ -1,4 +1,4 @@
-import "./assets/css/app.css";
+import "./App.css";
 import companyLogo from "./assets/images/logo/trafalgar.svg";
 
 const Header = () => {

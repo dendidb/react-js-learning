@@ -1,40 +1,42 @@
-import sdImg1 from "./assets/images/dummy/section-description-1.png";
-import sdImg2 from "./assets/images/dummy/section-description-2.png";
-import SectionDescriptionItem from "./SectionDescriptionItem";
+import cn from "classnames";
+import Button from "./Button";
 
-const SectionDescription = () => {
-  const sdItem = [
-    {
-      image: sdImg1,
-      title: "Leading healthcare providers",
-      desc: "Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, its not just work. We take pride in the solutions we deliver",
-    },
-    {
-      image: sdImg2,
-      title: "Download our mobile apps",
-      desc: "Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely",
-    },
-  ];
+const SectionDescription = ({ data, reverse = false, arrowIcon = false }) => {
+  const classNames = cn("section-description", {
+    "section-description--reverse": reverse,
+  });
 
-  return sdItem.map((v, i) => {
-    return (
-      <div
-        key={`sd-${i}`}
-        className={`section-description ${
-          i == 1 ? "section-description--reverse" : ""
-        }`}
-        id="apps"
-      >
+  return (
+    <>
+      <div className={classNames}>
         <div className="container">
-          <SectionDescriptionItem
-            image={v.image}
-            title={v.title}
-            desc={v.desc}
-          />
+          <div className="section-description__box">
+            <div className="section-description__img">
+              <img
+                className="section-description__img__el"
+                src={data.image}
+                alt={data.title}
+              />
+            </div>
+            <div className="section-description__txt">
+              <div className="section-description__txt__wrapper">
+                <h3 className="text-title text-title--left">{data.title}</h3>
+                <p className="text-desc text-desc--left">{data.desc}</p>
+                <Button
+                  type="link"
+                  variant="secondary"
+                  arrowIcon={arrowIcon}
+                  to={data.button.to}
+                >
+                  {data.button.text}
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    );
-  });
+    </>
+  );
 };
 
 export default SectionDescription;

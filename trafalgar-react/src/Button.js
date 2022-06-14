@@ -1,23 +1,35 @@
-const Button = ({
-  type = "button",
-  to,
-  variant = "primary",
-  text,
-  children,
-}) => {
+import cn from "classnames";
+
+const Button = (props) => {
+  const {
+    to,
+    children,
+    type = "button",
+    variant = "primary",
+    arrowIcon = false,
+    block = false,
+  } = props;
+
+  const classNames = cn("btn", `btn--${variant}`, {
+    "btn--block": block,
+  });
+
   return (
     <>
-      {type === "button" && (
-        <button type="button" className={`btn btn--${variant}`}>
-          {children}
-        </button>
-      )}
       {type === "link" && (
-        <a href={to} className={`btn btn--${variant}`}>
+        <a className={classNames} href={to}>
           {children}
+          {arrowIcon && <i class="icon-arrow-down"></i>}
         </a>
+      )}
+      {type !== "link" && (
+        <button type={type} className={classNames} href={to}>
+          {children}
+          {arrowIcon && <i class="icon-arrow-down"></i>}
+        </button>
       )}
     </>
   );
 };
+
 export default Button;
