@@ -110,6 +110,52 @@ React Fragment
 
 Instal React Module
 
-- classnames
+1.  Function Component
+    const Header = () => {
+    return (
+    // header
+    <div className="header">
+       <div className="container">
+          <div className="header__nav">
+             <a className="header__logo" href="index.html">
+                <img
+                  className="header__logo__img"
+                  src={companyLogo}
+                  alt="Trafalgar Logo"
+                />
+             </a>
+          </div>
+       </div>
+    </div>
+    );
+    };
 
-import cn from 'classname';
+2.  Class Component
+    class Clock extends React.Component {
+    constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+    }
+
+    render() {
+    return (
+       <div>
+          <h1>Hello, world!</h1>
+          <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+       </div>
+       );
+     }
+    }
+
+INSTAL SASS/SCSS
+
+- node-sass (SCSS/SASS)
+
+import di setiap components
+
+import './style.scss';
+
+- classnames
+  import cn from 'classname';
+
+ARCHITECTURE REACTJS

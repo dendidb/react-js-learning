@@ -4,6 +4,7 @@ import SectionDescription from "./SectionDescription";
 import HeroBanner from "./HeroBanner";
 import Header from "./Header";
 import Footer from "./Footer";
+import Tambahan from "./Tambahan";
 import OurServices from "./OurServices";
 import Blog from "./Blog";
 import Testimonials from "./Testimonials";
@@ -34,6 +35,7 @@ function App() {
       <div className="main-site">
         <HeroBanner />
         <OurServices />
+        <Tambahan />
         <SectionDescription data={dataSection1} />
         <SectionDescription
           data={dataSection2}

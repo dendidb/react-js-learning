@@ -19,13 +19,13 @@ const Button = (props) => {
       {type === "link" && (
         <a className={classNames} href={to}>
           {children}
-          {arrowIcon && <i class="icon-arrow-down"></i>}
+          {arrowIcon && <i className="icon-arrow-down"></i>}
         </a>
       )}
       {type !== "link" && (
         <button type={type} className={classNames} href={to}>
           {children}
-          {arrowIcon && <i class="icon-arrow-down"></i>}
+          {arrowIcon && <i className="icon-arrow-down"></i>}
         </button>
       )}
     </>
