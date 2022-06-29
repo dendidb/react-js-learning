@@ -1,5 +1,5 @@
-const OurServicesItem = ({img, title, desc}) => {
-
+const OurServicesItem = ({ data }) => {
+	const { img, title, desc } = data;
   return (
     <div className="our-services__card">
 			<div className="our-services__box">

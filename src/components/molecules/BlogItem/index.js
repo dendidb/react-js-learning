@@ -1,8 +1,10 @@
-const BlogItem = ({img, title, desc, to}) => {
+const BlogItem = ({ data}) => {
+	const {img, title, desc, to} = data;
+
   return (
 		<div className="blog__card">
 			<div className="blog__box">
-				<a className="blog__box__link" href={to}>#</a>
+				<a className="blog__box__link" href={to}>{title}</a>
 				<div className="blog__img">
 					<img className="blog__img__el" src={img} alt={title} />
 				</div>

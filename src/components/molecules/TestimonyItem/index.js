@@ -1,5 +1,6 @@
-const TestimonyItem = ({img, name, position, testimony}) => {
-
+const TestimonyItem = ({ data }) => {
+	const {img, name, position, testimony} = data;
+	
 	return (
 		<div className="testimony__item owl-item active">
 			<div className="testimony__custommer">

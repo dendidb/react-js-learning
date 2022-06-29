@@ -1,5 +1,8 @@
 {
-  "extends": ["airbnb", "prettier"],
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
   "env": {
     "browser": true,
     "es6": true,
@@ -8,21 +11,35 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "moduleDirectory": ["node_modules", "src/"],
-        "extensions": [".js", ".jsx"]
+        "moduleDirectory": [
+          "node_modules",
+          "src/"
+        ],
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
       }
     }
   },
-  "parser": "@babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     }
   },
-  "plugins": ["react", "jsx-a11y", "eslint-plugin-prettier", "prettier"],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "eslint-plugin-prettier",
+    "prettier"
+  ],
   "rules": {
     "react/prefer-stateless-function": 0,
-    "space-before-function-paren": ["error", "never"],
+    "space-before-function-paren": [
+      "error",
+      "never"
+    ],
     "import/no-named-as-default": 0,
     "prettier/prettier": [
       "error",
@@ -43,21 +60,32 @@
       }
     ],
     "linebreak-style": "off",
-    "react/no-array-index-key": ["off"],
-    "max-len": ["off"],
+    "react/no-array-index-key": [
+      "off"
+    ],
+    "max-len": [
+      "off"
+    ],
     "react/forbid-prop-types": [
       1,
       {
-        "forbid": ["any"]
+        "forbid": [
+          "any"
+        ]
       }
     ],
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [".js", ".jsx"]
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
       }
     ],
-    "react/no-danger": ["off"],
+    "react/no-danger": [
+      "off"
+    ],
     "import/extensions": [
       "error",
       "always",
@@ -69,17 +97,25 @@
     "jsx-a11y/label-has-for": [
       0,
       {
-        "components": ["Label"],
+        "components": [
+          "Label"
+        ],
         "allowChildren": true
       }
     ],
     "no-console": [
       "error",
       {
-        "allow": ["warn", "error"]
+        "allow": [
+          "warn",
+          "error"
+        ]
       }
     ],
-    "comma-dangle": ["error", "never"],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
     "no-unused-vars": [
       "error",
       {
@@ -90,7 +126,9 @@
     "no-shadow": [
       "off",
       {
-        "allow": ["props"]
+        "allow": [
+          "props"
+        ]
       }
     ],
     "no-param-reassign": [
@@ -119,7 +157,10 @@
     "no-underscore-dangle": [
       "error",
       {
-        "allow": ["_id", "_isMounted"]
+        "allow": [
+          "_id",
+          "_isMounted"
+        ]
       }
     ]
   }
