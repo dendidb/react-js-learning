@@ -1,0 +1,108 @@
+/* ==========================================================================
+Layout: hero banner
+========================================================================== */
+
+// hero banner
+.hero-banner {
+  $hb: &;
+  position: relative;
+  &__item {
+    &::before {
+      opacity: 0;
+      transform: translateX(-32px);
+      transition: all 1750ms ease;
+    }
+  }
+  &__img__el {
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all 5s ease 0s;
+  }
+  &__title,
+  &__desc,
+  &__btn {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  &__title {
+    transition: all 1000ms ease 0s;
+  }
+  &__desc {
+    transition: all 1200ms ease 0s;
+  }
+  &__btn {
+    transition: opacity 1000ms ease, transform 1000ms ease;
+    transition-delay: 0s;
+  }
+  &--single,
+  .owl-item.active {
+    #{$hb} {
+      &__item {
+        &::before {
+          opacity: 1;
+          transform: translateX(0);
+          transition: opacity 1000ms ease 2500ms, transform 2000ms ease 1500ms;
+        }
+      }
+      &__img__el {
+        opacity: 1;
+        transform: scaleX(1);
+        transition: opacity 3500ms ease, transform 5000ms ease;
+        transition-delay: 1000ms;
+      }
+      &__title,
+      &__desc,
+      &__btn {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      &__title {
+        transition-delay: 500ms;
+      }
+      &__desc {
+        transition-delay: 1000ms;
+      }
+      &__btn {
+        transition: opacity 1750ms ease, transform 1750ms ease;
+        transition-delay: 1500ms;
+      }
+    }
+  }
+  &.owl-carousel {
+    #{$hb}__img__el,
+    .owl-item img {
+      width: 124%;
+      @include medium {
+        width: 100%;
+      }
+    }
+    .owl-dot {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      opacity: 0.2;
+      background-color: color(blue, 1);
+      transition: all 500ms ease;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        width: 32px;
+        opacity: 1;
+      }
+      &s {
+        position: absolute;
+        bottom: 24px;
+        left: 50%;
+        line-height: 1;
+        transform: translateX(-50%);
+        @include small {
+          bottom: 8px;
+        }
+      }
+    }
+  }
+}

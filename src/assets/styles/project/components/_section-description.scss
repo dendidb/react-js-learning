@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Components Section Description
+   ========================================================================== */
+
+.section-description {
+  $sd: &;
+  position: relative;
+  padding: 120px 0;
+  @include large {
+    padding: 88px 0;
+  }
+  @include medium {
+    padding: 72px 0;
+  }
+  @include small {
+    padding: 64px 0;
+  }
+  @include x-small {
+    padding: 48px 0;
+  }
+  &__wrapper {
+    @include clearfix;
+  }
+  &__img {
+    float: left;
+    width: 50%;
+    @include medium {
+      float: none;
+      width: 100%;
+      margin-bottom: 48px;
+    }
+    @include small {
+      margin-bottom: 32px;
+    }
+    &__el {
+      display: block;
+      max-width: 650px;
+      margin-left: -104px;
+      @include mq(1440px) {
+        margin-left: -64px;
+        max-width: 580px;
+      }
+      @include large {
+        max-width: 480px;
+        margin-left: -32px;
+      }
+      @include medium {
+        max-width: 640px;
+        margin: 0 auto;
+      }
+      @include small {
+        max-width: 90%;
+      }
+      @include x-small {
+        max-width: 100%;
+      }
+    }
+  }
+  &__txt {
+    width: 50%;
+    min-height: 476px;
+    padding-left: 142px;
+    float: left;
+    display: table;
+    @include large {
+      max-width: initial;
+      min-height: 350px;
+      padding-left: 40px;
+    }
+    @include medium {
+      float: none;
+      width: 100%;
+      min-height: initial;
+      display: block;
+      padding-left: 0;
+    }
+    &__wrapper {
+      width: 100%;
+      display: table-cell;
+      vertical-align: middle;
+      @include medium {
+        display: block;
+      }
+    }
+  }
+  &__desc {
+    @include font-size(18);
+    margin-bottom: 40px;
+    @include medium {
+      margin-bottom: 32px;
+    }
+    @include small {
+      @include font-size(16);
+    }
+  }
+  .btn .icon-arrow-down {
+    animation: animasi 1s ease infinite;
+  }
+
+  // -- modifier
+  &--reverse {
+    &::after {
+      content: "";
+      position: absolute;
+      right: 16px;
+      top: -54px;
+      z-index: -1;
+      width: 90px;
+      height: 115px;
+      background: url(../../../img/bg/element1.svg) no-repeat;
+      background-size: cover;
+      @include large {
+        right: 8;
+        height: 104px;
+        width: 80px;
+        background-position: left top;
+      }
+      @include small {
+        right: 0;
+        top: -32px;
+        width: 64px;
+        height: 80px;
+      }
+    }
+    #{$sd}__img {
+      float: right;
+      @include small {
+        float: none;
+      }
+      &__el {
+        margin-left: 104px;
+        @include mq(1440px) {
+          margin-left: 64px;
+        }
+        @include large {
+          margin-left: 32px;
+        }
+        @include medium {
+          margin: 0 auto;
+        }
+      }
+    }
+    #{$sd}__txt {
+      padding-left: 0;
+      padding-right: 142px;
+      @include large {
+        padding-right: 40px;
+      }
+      @include medium {
+        padding-right: 32px;
+      }
+      @include small {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+@keyframes animasi {
+  from {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(4px);
+    opacity: 0.1;
+  }
+}
